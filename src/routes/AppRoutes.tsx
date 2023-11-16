@@ -1,19 +1,18 @@
 import React from 'react';
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Home from '../pages/Home';
+import SeeProduct from '../pages/SeeProduct';
 
 
-function App() {
+function AppRoutes() {
   return (
     <BrowserRouter>
-    <div>
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* Adicione mais rotas conforme necessário */}
+        <Route path="/SeeProduct" element={<SeeProduct />} />
       </Routes>
-    </div>
     </BrowserRouter>
   );
 }
 
-export default App;
+export default AppRoutes;

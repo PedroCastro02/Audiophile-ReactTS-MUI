@@ -7,14 +7,13 @@ import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
-import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import Cart from '../svg-components/Carticon';
 
-const pages = ['HOME', 'HEADPHONES', 'SPEAKERS', 'EARPHONES'];
+export const pages = ['HOME', 'HEADPHONES', 'SPEAKERS', 'EARPHONES'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function Header() {
@@ -108,16 +107,20 @@ function Header() {
               letterSpacing: '.3rem',
               color: 'inherit',
               textDecoration: 'none',
+              '@media (max-width: 600px)': {
+               fontSize: '1rem', textAlign: 'center' },
             }}
           >
             audiophile
           </Typography>
-          <Box sx={{ flexGrow: 1,  display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+          <Box sx={{ flexGrow: 1,  display: 'flex', justifyContent: 'center', alignItems: 'center', }}>
             {pages.map((page) => (
               <Button
+                id={page}
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block', fontSize:'1rem' }}
+                sx={{ my: 2, color: 'white', display: 'block', fontSize:'1.1rem', '@media (max-width: 600px)': {
+                  display: 'none' },}}
               >
                 {page}
               </Button>
