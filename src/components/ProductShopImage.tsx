@@ -25,6 +25,7 @@ const ProductShopImage = (props: any) => {
           width="160"
           src={imageUrl}
           alt=""
+          style={{backgroundImage: 'cover'}}
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div" sx={{ textDecoration: 'bold', color:'black'}}>

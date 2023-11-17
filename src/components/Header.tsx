@@ -12,9 +12,9 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import Cart from '../svg-components/Carticon';
+import { Link } from 'react-router-dom';
 
 export const pages = ['HOME', 'HEADPHONES', 'SPEAKERS', 'EARPHONES'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -54,7 +54,9 @@ function Header() {
               fontSize:'1.4rem'
             }}
           >
-            audiophile
+            <Link to="/" style={{ textDecoration:'none', color: 'white' }} >
+              audiophile
+            </Link >
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -128,33 +130,13 @@ function Header() {
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0}}>
-                <Cart />
+            <Tooltip title="Carrinho">
+              <IconButton sx={{ p: 0}}>
+                <Link to="/Cart" style={{ textDecoration:'none', color: '#A3A3A3' }} >
+                  <Cart />
+                </Link>
               </IconButton>
             </Tooltip>
-            <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
           </Box>
         </Toolbar>
       </Container>
