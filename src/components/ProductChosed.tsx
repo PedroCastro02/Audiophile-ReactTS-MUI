@@ -1,10 +1,43 @@
-import React from 'react'
+import  React, { useState } from 'react'
 import { Box, Button, IconButton, InputAdornment, TextField, Typography } from '@mui/material'
 import imagemTeste from '../assets/product-xx99-mark-two-headphones/desktop/image-product.jpg'
 
-const ProductChosed = ( produtoAtual: any ) => {
+interface Product {
+    id: number;
+    nome: string;
+    preco: number;
+    descricao: string;
+    img: any;
+    quantidade: number;
+}
 
-    const [value, setValue] = React.useState(0);
+interface ProductChosedProps {
+    produtoAtual: Product;
+  }
+
+  const ProductChosed = ({ produtoAtual }: ProductChosedProps) => {
+      
+      const [vetor, setVetorCompras] = useState<Product[]>([])
+      const [value, setValue] = useState(0);
+      
+
+
+      // adicionar o produto escolhido no vetor de compras do usuario
+      function HandleAddProdutoVetor (novoProduto: Product) {
+        novoProduto.quantidade = value;
+          setVetorCompras((prevVetor) => [...prevVetor, novoProduto]);
+
+          const produtosArray: Product[] = JSON.parse(localStorage.getItem("produtos")!);
+
+
+            vetor.map((item) => {
+
+                produtosArray.push(item);
+            })
+          localStorage.setItem("produtos", JSON.stringify(produtosArray))
+          console.log(JSON.parse(localStorage.getItem("produtos")!));
+        }
+    
 
     const HandleInputChange = (e: any) => {
         const inputValue = e.target.value;
@@ -24,11 +57,11 @@ const ProductChosed = ( produtoAtual: any ) => {
 
 
   return (
-    <Box sx={{ display: 'flex', mt: '5%', mr: '10%', ml: '10%', mb:'5%', justifyContent:'space-between'}}>
+    <Box sx={{ display: 'flex', mt: '3%', mr: '10%', ml: '10%', mb:'5%', justifyContent:'space-between', }}>
         <Box sx={{ width:'50%', display: 'flex', justifyContent:'center'}}>
             <img
             width={'80%'}
-           src={produtoAtual.produtoAtual.img}
+           src={produtoAtual.img}
             alt=""
             />
         </Box>
@@ -52,7 +85,7 @@ const ProductChosed = ( produtoAtual: any ) => {
                     '@media (max-width: 600px)': {
                     fontSize: '3rem', },
                 }}>
-            {produtoAtual.produtoAtual.nome}
+            {produtoAtual.nome}
             </Typography>    
             <Typography 
                 variant="h6"
@@ -61,7 +94,7 @@ const ProductChosed = ( produtoAtual: any ) => {
                     '@media (max-width: 600px)': {
                     fontSize: '1rem', },
                 }}>
-           {produtoAtual.produtoAtual.descricao}
+           {produtoAtual.descricao}
             </Typography> 
             <Typography 
                 variant="h6"
@@ -72,7 +105,7 @@ const ProductChosed = ( produtoAtual: any ) => {
                     '@media (max-width: 600px)': {
                     fontSize: '1rem', },
                 }}>
-            {produtoAtual.produtoAtual.preco}
+            {produtoAtual.preco}
             </Typography> 
             <Box sx={{display: 'flex', width: '100%', mt:'8%'}}>
             <TextField
@@ -101,7 +134,7 @@ const ProductChosed = ( produtoAtual: any ) => {
                     ),
                 }}
                 />
-                  <Button sx={{bgcolor: '#D87C4B', color: 'white', width: '45%', ml:'3%'}}>ADD TO CART</Button>  
+                  <Button sx={{bgcolor: '#D87C4B', color: 'white', width: '45%', ml:'3%',}} onClick={() => HandleAddProdutoVetor(produtoAtual)}>ADD TO CART</Button>  
             </Box> 
         </Box>
     </Box>
@@ -109,3 +142,4 @@ const ProductChosed = ( produtoAtual: any ) => {
 }
 
 export default ProductChosed
+

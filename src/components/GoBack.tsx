@@ -7,7 +7,7 @@ const GoBack = () => {
     <Box sx={{ display: 'flex', mt: '12%', mr: '10%', ml: '10%'}}>
         <Typography>
             <Link to="/" style={{ textDecoration:'none', color: '#585858'}}>
-            Go Back
+              Go Back
             </Link>
         </Typography>
     </Box>

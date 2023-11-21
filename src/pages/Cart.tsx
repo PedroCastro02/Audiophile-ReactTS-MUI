@@ -13,7 +13,7 @@ const Cart = () => {
       <ThemeProvider theme={theme}>
         <Header />
         <GoBack />
-        <Box sx={{mr:'10%', ml: '10%', mt: '4%', display:'flex', border:'2px solid red'}}>
+        <Box sx={{ mr:'10%', ml: '10%', mt: '4%', display:'flex' }}>
           <Inputs />
           <Summary />
         </Box>

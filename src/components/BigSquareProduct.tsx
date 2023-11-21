@@ -3,7 +3,7 @@ import React from 'react'
 import ImageProduct from '../assets/home/desktop/image-speaker-zx9.png';
 const BigSquareProduct = () => {
   return (
-    <Box sx={{mt:'10%', mr:'10%', ml: '10%', backgroundColor: '#D87C49', display: 'flex', borderRadius: '10px'}}>
+    <Box sx={{mt:'10%', mr:'10%', ml: '10%', backgroundColor: '#D87C49', display: 'flex', borderRadius: '10px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.12), 0 6px 20px rgba(0, 0, 0, 0.12), 0 -6px 20px rgba(0, 0, 0, 0.12)'}}>
         <Box sx={{mt:'10%', ml: '10%'}}>
             <img src={ImageProduct} style={{width: '70%'}}></img>
         </Box>

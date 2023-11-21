@@ -4,7 +4,7 @@ import ImagemBackground3 from '../assets/product-yx1-earphones/desktop/image-gal
 
 const SmallSquareProduct2 = () => {
   return (
-    <Box sx={{display: 'flex', mt:'5%', mr:'10%', ml: '10%', height:'300px', justifyContent: 'space-between'}}>  
+    <Box sx={{display: 'flex', mt:'5%', mr:'10%', ml: '10%', height:'300px', justifyContent: 'space-between', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.12), 0 6px 20px rgba(0, 0, 0, 0.12), 0 -6px 20px rgba(0, 0, 0, 0.12)'}}>  
         <Box sx={{width: '47%', backgroundImage: `url(${ImagemBackground3})`, backgroundSize: 'cover', borderRadius: '10px'}}>    
         </Box>  
         <Box sx={{width: '47%', display: 'flex',  justifyContent: 'center', flexDirection: 'column', alignItems: 'center', backgroundColor: '#EEE'}}>   

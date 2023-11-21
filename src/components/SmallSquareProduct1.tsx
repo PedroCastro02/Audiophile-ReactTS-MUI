@@ -4,7 +4,7 @@ import ImagemBackground2 from '../assets/product-zx7-speaker/desktop/img.png'
 
 const SmallSquareProduct1 = () => {
   return (
-    <Box sx={{ mt:'5%', mr:'10%', ml: '10%',  backgroundImage: `url(${ImagemBackground2})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', height:'300px', display: 'flex', borderRadius: '10px'}}>    
+    <Box sx={{ mt:'5%', mr:'10%', ml: '10%',  backgroundImage: `url(${ImagemBackground2})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', height:'300px', display: 'flex', borderRadius: '10px', boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.12), 0 6px 20px rgba(0, 0, 0, 0.12), 0 -6px 20px rgba(0, 0, 0, 0.12)'}}>    
         <Box sx={{ display: 'flex',  justifyContent: 'center', flexDirection: 'column', alignItems: 'center'}}>
           <Typography 
                   variant="h1"

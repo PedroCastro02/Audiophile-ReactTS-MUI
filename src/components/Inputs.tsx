@@ -6,7 +6,7 @@ import { Form, InputGroup } from 'react-bootstrap'
 const Inputs = () => {
   return (
     <>
-        <Box sx={{ width:'60%', ml: '4%'}}>
+        <Box sx={{ width:'60%', ml: '2%',  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.12), 0 6px 20px rgba(0, 0, 0, 0.12), 0 -6px 20px rgba(0, 0, 0, 0.12)', pl:'3%', pt: '3%', pb:'3%', borderRadius: '30px'}}>
             <Typography
                 variant='h1'
                 sx={{fontSize: '1.8rem', fontWeight: '700', '@media (max-width: 700px)': {fontSize: '1rem', },}}>CHECKOUT
@@ -25,7 +25,7 @@ const Inputs = () => {
                             </Box>
                     </Box>
                             <Box sx={{m: '2%'}}>
-                                <Typography sx={{fontSize: '0.9rem', fontWeight: '700', mt: '2%',ml: '2%', color: 'black',}}>Phone Number</Typography>
+                                <Typography sx={{fontSize: '0.9rem', fontWeight: '700', mt: '2%', color: 'black',}}>Phone Number</Typography>
                                 <TextField id="outlined-basic" variant="outlined" placeholder='+1 202-555-0136' />
                             </Box>
                 </Box>
@@ -47,7 +47,7 @@ const Inputs = () => {
                             </Box>
                     </Box>
                             <Box sx={{m:'2%'}}>
-                                <Typography sx={{fontSize: '0.9rem', fontWeight: '700', mt: '2%',ml: '2%', color: 'black',}}>Country</Typography>
+                                <Typography sx={{fontSize: '0.9rem', fontWeight: '700', mt: '2%',ml: '1%', color: 'black',}}>Country</Typography>
                                 <TextField id="outlined-basic" variant="outlined" placeholder='United States' />
                             </Box>
                 </Box>

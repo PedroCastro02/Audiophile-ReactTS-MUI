@@ -24,6 +24,7 @@ const {setProdutoAtual} = props;
                 {json.map((produto) => (
                   // <Link  key={produto.id} to={`/produto/${produto.id}`} style={{ textDecoration: 'none', color: '#A3A3A3' }}>
                     <Box   key={produto.id} onClick={() => setProdutoAtual(produto)}>
+                     
                       <ProductShopImage imageUrl={produto.img} title={produto.nome} />
                     </Box>
                   // </Link>

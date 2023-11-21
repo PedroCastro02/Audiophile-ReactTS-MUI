@@ -16,7 +16,7 @@ const ProductShopImage = (props: any) => {
         flexDirection: 'column', 
         alignItems:  'center', 
         justifyContent:'center',
-        background: 'none'  
+        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.12), 0 6px 20px rgba(0, 0, 0, 0.12), 0 -6px 20px rgba(0, 0, 0, 0.12)' 
         }}>
           <Link to="/SeeProduct" style={{ textDecoration:'none', color: '#A3A3A3' }}>
       <CardActionArea>  
